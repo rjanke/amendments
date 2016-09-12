@@ -1,0 +1,331 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* End CSS Reset */
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: rgba(236,239,241 ,.75);
+}
+
+.header-outer {
+  position: fixed;
+  background-color: rgba(238,238,238 ,1);
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  box-shadow: .0 .08em .2em 0 rgba(158,158,158 ,1);
+  padding: .4em;
+}
+
+.header-inner {
+  max-width: 29em;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav-button {
+  padding: .6em;
+  background-color: rgba(238,238,238 ,1);
+  cursor: pointer;
+  box-shadow: inset 0 -0.3em 0 rgba(224,224,224 ,1);
+}
+
+.open-all:hover {
+  box-shadow: inset 0 -0.3em 0 rgba(129,199,132 ,1);
+}
+
+.close-all:hover {
+  box-shadow: inset 0 -0.3em 0 rgba(229,115,115 ,1);
+}
+
+.top:hover {
+  box-shadow: inset 0 -0.3em 0 rgba(255,213,79 ,1);
+}
+
+.wat:hover {
+  box-shadow: inset 0 -0.3em 0 rgba(77,182,172 ,1);
+}
+
+.page-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 2.3em;
+  margin-bottom: .5em;
+  text-align: center;
+  font-size: 2em;
+}
+
+.page-layout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 30em;
+}
+
+.page-layout-width {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.wat-modal {
+  display: none;
+  position: fixed;
+  padding-top: 10em;
+  left: 0;
+  top: 0;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.wat-modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  max-width: 43em;
+  width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.amendment-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: .25em;
+  text-align: center;
+  font-size: 2em;
+}
+
+.amendment-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(238,238,238 ,1);
+  padding-left: .5em;
+  padding-right: .5em;
+  padding-bottom: .5em;
+  margin: .5em;
+  margin-bottom: 2em;
+  box-shadow: .07em .07em .4em 0 rgba(158,158,158 ,1);
+}
+
+/* entire container, keeps perspective */
+.flip-container {
+	-webkit-perspective: 1000px;
+	        perspective: 1000px;
+}
+	/* flip the pane. Important class is .flip */
+	.flip-container.flipper, .flip-container.flip .flipper {
+		-webkit-transform: rotateY(-180deg) scale(.90);
+		        transform: rotateY(-180deg) scale(.90);
+	}
+
+.flip-container, .front, .back {
+  width: 100%;
+	height: 20em;
+}
+
+/* flip speed goes here */
+.flipper {
+	-webkit-transition: -webkit-transform 1s;
+	transition: -webkit-transform 1s;
+	transition: transform 1s;
+	transition: transform 1s, -webkit-transform 1s;
+	-webkit-transform-style: preserve-3d;
+	        transform-style: preserve-3d;
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	-webkit-backface-visibility: hidden;
+	        backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  box-shadow: .1em .1em .4em 0 rgba(158,158,158 ,1);
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	-webkit-transform: rotateY(0deg);
+	        transform: rotateY(0deg);
+  /*background-color: rgba(239,83,80 ,1);*/
+  background-color: rgba(207,216,220 ,1);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.question {
+  padding: 1em;
+  font-size: 1.8em;
+}
+
+/* back, initially hidden pane */
+.back {
+	-webkit-transform: rotateY(-180deg);
+	        transform: rotateY(-180deg);
+  background-color: rgba(41,182,246 ,.5);
+  background-color: rgba(179,229,252 ,1);
+  text-align: center;
+  overflow-y: auto;;
+}
+
+.answer {
+  padding: .35em;
+  padding-top: 1.5em;
+  font-size: 1.5em;
+}
+
+.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.button {
+  margin-top: .5em;
+  padding: 1em;
+  font-size: 1.4em;
+  box-shadow: .07em .07em .2em 0 rgba(158,158,158 ,1);
+  cursor: pointer;
+}
+
+.button.yes {
+  background-color: rgba(76,175,80,1);
+}
+
+.button.no {
+  background-color: rgba(255,193,7,1);
+}

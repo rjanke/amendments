@@ -1,0 +1,36 @@
+extends ./base.jade
+block content
+  include ./includes/header.jade
+  .page-layout
+    .page-layout-width
+      .wat-modal
+        .wat-modal-content
+          .wat-modal-header
+            p.close x
+          .wat-modal-main
+            p.site-explain Wat is this site for?
+            ul.site-reasons
+              li.list #[span Studying the 27 Amendments of the U.S. Constitution]
+              li.list #[span Knowing the laws that govern you]
+              li.list #[span Web development practice]
+              li.list #[span Fun and 3D spins!]
+              li.list #[span Helping me and you get an A+ :D]
+          .wat-modal-footer
+            p Short references for amendments found #[a.reference(href="https://en.wikipedia.org/wiki/List_of_amendments_to_the_United_States_Constitution" target="_blank") here]
+            p.author Made with #[span.love damn love] by Ryan Janke
+      h1.page-heading Know the Damn Amendments!
+      p.bill-of-rights Bill of Rights = Amendments 1 - 10
+      //- 'amendment' can be anything. Ex: thing in amendments and #{thing} will
+      //- produce the same results.
+      each amendment in amendments
+        .amendment-card
+          h1.amendment-title #{amendment.name}
+          .flip-container
+            .flipper
+              .front
+                p.question Do you know this damn amendment?
+              .back
+                p.answer #{amendment.shortDefinition}
+          .buttons
+            a.button.yes Hell yeah!
+            a.button.no Nahhh..

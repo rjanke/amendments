@@ -1,0 +1,17 @@
+{
+  "name": "damn-amendments",
+  "version": "1.0.0",
+  "description": "Know the damn amendments!",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Ryan Janke",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "jade": "^1.11.0",
+    "morgan": "^1.7.0"
+  }
+}
