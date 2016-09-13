@@ -290,6 +290,12 @@ body {
   text-align: center;
 }
 
+.thumbs-up {
+  /*transition: opacity 1.25s ease;*/
+  opacity: 0;
+  height: 0;
+}
+
 .question {
   padding: 1em;
   font-size: 1.8em;
