@@ -1,4 +1,13 @@
-/* http://meyerweb.com/eric/tools/css/reset/
+.example {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -16,35 +25,35 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
 ol, ul {
-	list-style: none;
+  list-style: none;
 }
 blockquote, q {
-	quotes: none;
+  quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+  content: '';
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 /* End CSS Reset */
 
@@ -60,6 +69,8 @@ body {
 
 .header-outer {
   position: fixed;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   background-color: rgba(238,238,238 ,1);
   top: 0;
   left: 0;
@@ -123,10 +134,22 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 2.3em;
-  margin-bottom: .5em;
+  margin-top: 3.2em;
+  margin-bottom: 1.5em;
   text-align: center;
   font-size: 2em;
+}
+
+.bill-of-rights {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin-bottom: .4em;
+  font-size: 1.2em;
 }
 
 .page-layout {
@@ -176,19 +199,82 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+  @media (max-height: 800px){
+    .wat-modal {
+      padding-top: 1em;
+    }
+  }
+
 .wat-modal-content {
   position: relative;
   background-color: #fefefe;
   margin: auto;
-  max-width: 43em;
+  max-width: 40em;
   width: 95%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.close {
+  font-size: 2.5em;
+  margin: .25em;
+  padding: .25;
+  padding: 0;
+  line-height: .5em;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: rgba(229,115,115 ,1);
+}
+
+.wat-modal-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.wat-modal-main {
+  margin: 1.75em;
+}
+
+.site-explain {
+  font-size: 2.5em;
+  margin-bottom: 1em;
+}
+
+.site-reasons {
+  list-style-type: disc;
+  margin: 1em;
+  font-size: 1.2em;
+}
+
+.list {
+  margin: .75em;
+}
+
+.reference {
+  text-decoration: underline;
+}
+
+.author {
+  margin-top: 1em;
+}
+
+.love {
+  color: rgba(229,115,115 ,1);
+}
+
+.wat-modal-footer {
+  margin: 1.75em;
 }
 
 .amendment-title {
@@ -225,38 +311,38 @@ body {
 
 /* entire container, keeps perspective */
 .flip-container {
-	-webkit-perspective: 1000px;
-	        perspective: 1000px;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
 }
-	/* flip the pane. Important class is .flip */
-	.flip-container.flipper, .flip-container.flip .flipper {
-		-webkit-transform: rotateY(-180deg) scale(.90);
-		        transform: rotateY(-180deg) scale(.90);
-	}
+  /* flip the pane. Important class is .flip */
+  .flip-container.flipper, .flip-container.flip .flipper {
+    -webkit-transform: rotateY(-180deg) scale(.90);
+            transform: rotateY(-180deg) scale(.90);
+  }
 
 .flip-container, .front, .back {
   width: 100%;
-	height: 20em;
+  height: 20em;
 }
 
 /* flip speed goes here */
 .flipper {
-	-webkit-transition: -webkit-transform 1s;
-	transition: -webkit-transform 1s;
-	transition: transform 1s;
-	transition: transform 1s, -webkit-transform 1s;
-	-webkit-transform-style: preserve-3d;
-	        transform-style: preserve-3d;
-	position: relative;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  position: relative;
 }
 
 /* hide back of pane during swap */
 .front, .back {
-	-webkit-backface-visibility: hidden;
-	        backface-visibility: hidden;
-	position: absolute;
-	top: 0;
-	left: 0;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -272,16 +358,23 @@ body {
 
 /* front pane, placed above back */
 .front {
-	z-index: 2;
-	/* for firefox 31 */
-	-webkit-transform: rotateY(0deg);
-	        transform: rotateY(0deg);
-  /*background-color: rgba(239,83,80 ,1);*/
-  background-color: rgba(207,216,220 ,1);
+  z-index: 2;
+  /* for firefox 31 */
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+  background-color: rgba(239,83,80 ,1);
+  /*background-color: rgba(207,216,220 ,1);*/
+  background-color: rgb(244,242,234);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+}
+
+.thumbs-up {
+  /*transition: opacity 1.25s ease;*/
+  opacity: 0;
+  height: 0;
 }
 
 .question {
@@ -291,10 +384,11 @@ body {
 
 /* back, initially hidden pane */
 .back {
-	-webkit-transform: rotateY(-180deg);
-	        transform: rotateY(-180deg);
-  background-color: rgba(41,182,246 ,.5);
-  background-color: rgba(179,229,252 ,1);
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+  /*background-color: rgba(41,182,246 ,.5);
+  background-color: rgba(179,229,252 ,1);*/
+  background-color: rgba(178,235,232 ,.20);
   text-align: center;
   overflow-y: auto;;
 }
@@ -316,7 +410,7 @@ body {
 
 .button {
   margin-top: .5em;
-  padding: 1em;
+  padding: .75em;
   font-size: 1.4em;
   box-shadow: .07em .07em .2em 0 rgba(158,158,158 ,1);
   cursor: pointer;
@@ -328,4 +422,9 @@ body {
 
 .button.no {
   background-color: rgba(255,193,7,1);
+}
+
+    background: -webkit-linear-gradient(top, white, black);
+
+    background: linear-gradient(to bottom, white, black);
 }
