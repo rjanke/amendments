@@ -4,7 +4,6 @@
   "description": "Know the damn amendments!",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "author": "Ryan Janke",
@@ -13,5 +12,9 @@
     "express": "^4.14.0",
     "jade": "^1.11.0",
     "morgan": "^1.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rjanke/amendments"
   }
 }
