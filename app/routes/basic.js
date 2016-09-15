@@ -13,7 +13,7 @@ module.exports = function(app, express) {
     // from the require statement above and puts it into a variable called
     // amendments. This correlates to the jade template index.jade.
     res.render('index', {title: 'Know The Damn Amendments', amendments: amendments });
-  })
+  });
 
   // apply basicRouter to application
   return basicRouter;

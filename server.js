@@ -3,6 +3,7 @@ var app = express();
 var path = require('path');
 var config = require('./config');
 var morgan = require('morgan');
+var amendments = require('./data/amendments.json');
 
 // security
 app.disable('x-powered-by');
@@ -29,6 +30,11 @@ app.use(express.static('public'));
 var basicRoutes = require('./app/routes/basic')(app, express);
 app.use('/', basicRoutes);
 // end basicRouter------------------------------------------------------
+
+// Catch all route
+app.get('*', function(req, res) {
+  res.render('index', {title: 'Know The Damn Amendments', amendments: amendments });
+});
 
 app.listen(config.port);
 console.log(config.port +' is the port of no return...');
